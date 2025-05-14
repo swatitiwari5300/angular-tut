@@ -9,4 +9,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-tut';
+  name = 'Swati';
+  x=10;
+  y=20;
 }
