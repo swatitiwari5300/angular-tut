@@ -12,11 +12,18 @@ import { ProfileComponent } from './profile/profile.component';
 })
 export class AppComponent {
   title = 'angular-tut';
-  name = 'Swati';
-  x=10;
+  name:string = 'Swati'; //String datatype is defined
+  x=10; //properties
   y=20;
 
   handleClickEvent() {
-    alert("Function called!!!!")
+    let x = 30; //variables
+    console.log("Function called!!!!")
+    this.otherFunction();
   }
+
+  otherFunction(){
+    console.log("other function")
+  }
+
 }
