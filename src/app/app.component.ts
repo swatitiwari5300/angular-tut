@@ -24,7 +24,12 @@ export class AppComponent {
   }
 
   otherFunction(){
+    let a:any = true;
     console.log("other function")
+  }
+
+  sum(a:number,b:number){
+    console.log(a+b);
   }
 
 }
