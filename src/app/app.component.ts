@@ -32,4 +32,11 @@ export class AppComponent {
     console.log(a+b);
   }
 
+  handleEvent(event:Event){
+    console.log("function called",event.type)
+    console.log("function called",event.target)
+    console.log("function called",(event.target as Element).classList)
+    console.log("value",(event.target as HTMLInputElement).value)
+  }
+
 }
