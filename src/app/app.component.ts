@@ -13,11 +13,12 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'angular-tut';
   name:string = 'Swati'; //String datatype is defined
-  x=10; //properties
-  y=20;
+  x:string|number=10; //property can have either string value as well as number
+  y:any=20;
 
   handleClickEvent() {
-    let x = 30; //variables
+    let x:number = 30; //variables with number datatype
+    this.x = 'any value';
     console.log("Function called!!!!")
     this.otherFunction();
   }
