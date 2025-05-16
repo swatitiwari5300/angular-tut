@@ -12,7 +12,7 @@
 <button (click)="handleClickEvent()">click me</button>
 <button (click)="sum(10,20)">datatype check</button> 
 -->
-
+<!--
 <button class="btn" name="login" (click)="handleEvent($event)">Click Event</button>
 <br>
 <br>
@@ -31,4 +31,21 @@ style="background-color: blue; width: 100px; height: 100px;"></div>
 (blur)="handleEvent($event)"
 (focus)="handleEvent($event)"
 (input)="handleEvent($event)"
-name="user">
+name="user"> -->
+
+<h1>Get and Set Input field value</h1>
+<h1>User Name is: {{displayName}}</h1>
+<input type="text" (input)="getName($event)" value="{{name}}" placeholder="Enter User Name">
+<br>
+<br>
+<button (click)="showDisplayName()">get value</button>
+<button (click)="setName()">set name</button>
+<br>
+<br>
+
+<h1>Email: {{email}}</h1>
+<input type="text" placeholder="enter email" #emailField>
+<br>
+<br>
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button>

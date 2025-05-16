@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  /*
   title = 'angular-tut';
   name:string = 'Swati'; //String datatype is defined
   x:string|number=10; //property can have either string value as well as number
@@ -38,5 +39,29 @@ export class AppComponent {
     console.log("function called",(event.target as Element).classList)
     console.log("value",(event.target as HTMLInputElement).value)
   }
+    */
 
+  name = ""
+  displayName =""
+  email=""
+  getName(event:Event){
+    const name = (event.target as HTMLInputElement).value;
+    console.log(name);
+    this.name = name;
+  }
+  showDisplayName(){
+    this.displayName = this.name;
+  }
+  setName(){
+    this.name = "Swati"
+  }
+
+  getEmail(val:string){
+    console.log(val);
+    this.email = val;
+  }
+
+    setEmail(){
+    this.email = "Swati@gmail.com"
+  }
 }
