@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, effect, Signal, signal, WritableSignal,computed } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -111,5 +111,29 @@ export class AppComponent {
 
   getName(event:string){
     console.log(event);
+  }
+
+  count = signal(10);
+  x = 10;
+
+constructor(){
+  effect(() => {console.log(this.count())});
+}
+
+  updateValue(val:string){
+    if(val === 'inc'){
+    //this.x = this.x+1
+    this.count.set(this.count()+1)
+    }else{
+    this.count.set(this.count()-1)
+    }
+  }
+
+  data = signal<number | string>(10);
+  data2 : WritableSignal<number | string> = signal(20);
+  count2:Signal<number> = computed(()=>100)
+
+  updateSignal(){
+    this.data.set("hello");
   }
 }
