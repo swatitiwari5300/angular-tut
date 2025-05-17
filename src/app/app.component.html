@@ -86,6 +86,7 @@ name="user">
 <button (click)="handleColor(2)">Blue</button>
 <button (click)="handleColor(3)">Green</button>
 <button (click)="handleColor(100)">Other</button>
+<input (input) = "handleInput($event)" type="text" placeholder="Enter color number">
 
 @if(color === 1){
 <div style="background-color: red; width: 100px; height: 100px;"></div>

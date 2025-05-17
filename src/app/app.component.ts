@@ -90,4 +90,8 @@ export class AppComponent {
   handleColor(val:number){
     this.color = val;
   }
+
+  handleInput(event:Event){
+    this.color = parseInt((event.target as HTMLInputElement).value);
+  }
 }
