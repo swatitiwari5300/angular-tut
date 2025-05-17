@@ -101,4 +101,15 @@ export class AppComponent {
     this.color = val;
   }
 
+  users = ["Anil", "Swati", "Tony", "Raj"]
+  students = [
+    {name: "anil", age: 29, email:"anil@example.com"},
+    {name: "swati", age: 23, email:"swatit@example.com"},
+    {name: "raj", age: 20, email:"rajj@example.com"},
+    {name: "rohit", age: 22, email:"rohitD@example.com"},
+  ]
+
+  getName(event:string){
+    console.log(event);
+  }
 }

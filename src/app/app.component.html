@@ -1,4 +1,4 @@
-<h1>Hello Angular 19</h1>
+<!-- <h1>Hello Angular 19</h1> -->
 <!---
 <h2>{{title}}</h2>
 <h3>{{name}}</h3>
@@ -98,7 +98,7 @@ name="user">
 <div style="background-color: black; width: 100px; height: 100px;"></div>
 } -->
 
-<h1>Switch Case in Angular</h1>
+<!-- <h1>Switch Case in Angular</h1>
 
 <button (click)="handleColor('red')">Red</button>
 <button (click)="handleColor('blue')">Blue</button>
@@ -125,4 +125,21 @@ name="user">
         <h1>No Color Matches</h1>
     }
 
+} -->
+
+<h1>FOR LOOP IN TEMPLATE</h1>
+
+@for (user of users; track user) {
+    <h2>{{user}}</h2>
+}
+
+<hr>
+
+@for (student of students; track student; let id = $index) {
+    <h3>
+        <span>id: {{id}}</span> <br>
+        <span>name: {{student.name}} </span> <br>
+        <span>email: {{student.email}} </span> <br>
+        <button (click)="getName(student.name)">Get Age</button>
+    </h3>
 }
