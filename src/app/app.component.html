@@ -54,7 +54,30 @@ name="user">
 <app-login></app-login>-->
 
 <h1>If Else condition | Control flow in Angular</h1>
-
+<!-- @if (x === 10) {
 <div style="background-color: green;width: 200px; height: 200px;">
 
 </div>
+} -->
+
+<button (click)="hide()">Hide div</button>
+<button (click)="show()">Show div</button>
+<button (click)="toggle()">Toggle div</button>
+
+
+@if(display){
+<div style="background-color: green;width: 200px; height: 200px;">
+
+</div>
+}
+
+
+<hr>
+<button (click)="toggleTwo()">{{toggleProp? 'show gold div' : 'show red div'}}</button>
+
+@if (toggleProp) {
+    <div style="background-color: gold; width: 200px; height: 200px;"></div>
+}
+@else {
+        <div style="background-color: red; width: 200px; height: 200px;"></div>
+}

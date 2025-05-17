@@ -41,27 +41,47 @@ export class AppComponent {
   }
     */
 
-  name = ""
-  displayName =""
-  email=""
-  getName(event:Event){
-    const name = (event.target as HTMLInputElement).value;
-    console.log(name);
-    this.name = name;
-  }
-  showDisplayName(){
-    this.displayName = this.name;
-  }
-  setName(){
-    this.name = "Swati"
+  // name = ""
+  // displayName =""
+  // email=""
+  // getName(event:Event){
+  //   const name = (event.target as HTMLInputElement).value;
+  //   console.log(name);
+  //   this.name = name;
+  // }
+  // showDisplayName(){
+  //   this.displayName = this.name;
+  // }
+  // setName(){
+  //   this.name = "Swati"
+  // }
+
+  // getEmail(val:string){
+  //   console.log(val);
+  //   this.email = val;
+  // }
+
+  //   setEmail(){
+  //   this.email = "Swati@gmail.com"
+  // }
+
+  display = true;
+  x = 10;
+  toggleProp = true;
+
+  hide(){
+    this.display = false;
   }
 
-  getEmail(val:string){
-    console.log(val);
-    this.email = val;
+  show(){
+    this.display = true;
   }
 
-    setEmail(){
-    this.email = "Swati@gmail.com"
+  toggle(){
+    this.display = !this.display;
+  }
+
+  toggleTwo(){
+    this.toggleProp = !this.toggleProp;
   }
 }
