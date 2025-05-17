@@ -157,4 +157,8 @@ constructor(){
     this.x2.set(100);
     console.log(this.z2());
   }
+
+  updateX2(){
+    this.x2.set(1000);
+  }
 }
