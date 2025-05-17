@@ -136,4 +136,25 @@ constructor(){
   updateSignal(){
     this.data.set("hello");
   }
+
+  x1 = 10;
+  y1 = 20;
+
+  z1 = this.x1+this.y1;
+
+  showValue(){
+    console.log(this.z1);
+    this.x1 = 100;
+    console.log(this.z1);
+  }
+
+  x2 = signal(10);
+  y2 = signal(20);
+  z2 = computed(()=>this.x2()+this.y2());
+
+  showValueComputedSig(){
+    console.log(this.z2());
+    this.x2.set(100);
+    console.log(this.z2());
+  }
 }
