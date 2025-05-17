@@ -84,4 +84,10 @@ export class AppComponent {
   toggleTwo(){
     this.toggleProp = !this.toggleProp;
   }
+
+  color = 1;
+
+  handleColor(val:number){
+    this.color = val;
+  }
 }

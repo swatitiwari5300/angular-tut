@@ -59,7 +59,7 @@ name="user">
 
 </div>
 } -->
-
+<!-- 
 <button (click)="hide()">Hide div</button>
 <button (click)="show()">Show div</button>
 <button (click)="toggle()">Toggle div</button>
@@ -80,4 +80,19 @@ name="user">
 }
 @else {
         <div style="background-color: red; width: 200px; height: 200px;"></div>
+} -->
+
+<button (click)="handleColor(1)">Red</button>
+<button (click)="handleColor(2)">Blue</button>
+<button (click)="handleColor(3)">Green</button>
+<button (click)="handleColor(100)">Other</button>
+
+@if(color === 1){
+<div style="background-color: red; width: 100px; height: 100px;"></div>
+}@else if (color === 2) {
+<div style="background-color: blue; width: 100px; height: 100px;"></div>
+}@else if (color === 3) {
+<div style="background-color: green; width: 100px; height: 100px;"></div>
+}@else {
+<div style="background-color: black; width: 100px; height: 100px;"></div>
 }
