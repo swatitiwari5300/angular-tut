@@ -65,33 +65,40 @@ export class AppComponent {
   //   this.email = "Swati@gmail.com"
   // }
 
-  display = true;
-  x = 10;
-  toggleProp = true;
+  // display = true;
+  // x = 10;
+  // toggleProp = true;
 
-  hide(){
-    this.display = false;
-  }
+  // hide(){
+  //   this.display = false;
+  // }
 
-  show(){
-    this.display = true;
-  }
+  // show(){
+  //   this.display = true;
+  // }
 
-  toggle(){
-    this.display = !this.display;
-  }
+  // toggle(){
+  //   this.display = !this.display;
+  // }
 
-  toggleTwo(){
-    this.toggleProp = !this.toggleProp;
-  }
+  // toggleTwo(){
+  //   this.toggleProp = !this.toggleProp;
+  // }
 
-  color = 1;
+  // color = 1;
 
-  handleColor(val:number){
+  // handleColor(val:number){
+  //   this.color = val;
+  // }
+
+  // handleInput(event:Event){
+  //   this.color = parseInt((event.target as HTMLInputElement).value);
+  // }
+
+  color = 'red';
+
+  handleColor(val:string){
     this.color = val;
   }
 
-  handleInput(event:Event){
-    this.color = parseInt((event.target as HTMLInputElement).value);
-  }
 }
