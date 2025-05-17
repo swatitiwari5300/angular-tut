@@ -116,9 +116,9 @@ export class AppComponent {
   count = signal(10);
   x = 10;
 
-constructor(){
-  effect(() => {console.log(this.count())});
-}
+// constructor(){
+//   effect(() => {console.log(this.count())});
+// }
 
   updateValue(val:string){
     if(val === 'inc'){
@@ -160,5 +160,27 @@ constructor(){
 
   updateX2(){
     this.x2.set(1000);
+  }
+
+  username = signal('Anil');
+  count1 =signal(0);
+  displayHeading = false
+
+  constructor(){
+    effect(() => {
+      console.log(this.username())
+      if(this.count1() === 2){
+        this.displayHeading = true;
+        setTimeout(() => {
+          this.displayHeading = false;
+        }, 2000)
+      }else{
+        this.displayHeading = false;
+      }
+    })
+  }
+
+  toggleVal(){
+    this.count1.set(this.count1()+1);
   }
 }

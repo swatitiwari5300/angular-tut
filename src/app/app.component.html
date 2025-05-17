@@ -167,4 +167,13 @@ name="user">
 
 <button (click)="updateX2()">update x2</button>
 
+<h1>{{username()}}</h1>
+<button (click)="username.set('Sam')">update username</button>
+
+<h2>{{count1()}}</h2>
+<button (click)="toggleVal()">show page heading</button>
+
+@if (displayHeading) {
+<h1 style="background-color: green;">Page Heading</h1>
+}
 
